@@ -8,11 +8,11 @@ setwd("/Users/jordyn/Desktop/BCB546_Spring2025/assignments/Data files")
 fang <- fang_et_al_genotypes
 snp <- snp_position
 
-dim(fang) # dim 2783, 986. this lists colms and rows
-dim(snp) # dim 983, 15. this lists colms and rows
+dim(fang) ### dim 2783, 986. this lists colms and rows
+dim(snp) ### dim 983, 15. this lists colms and rows
 
-ncol(fang) # number of columns is 986
-ncol(snp) # number of columns is 15
+ncol(fang) ### number of columns is 986
+ncol(snp) ### number of columns is 15
 
 nrow(fang) # 2783 rows
 nrow(snp) # 983 rows
