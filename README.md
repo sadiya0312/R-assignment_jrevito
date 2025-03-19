@@ -4,19 +4,23 @@
 
 ### assigning txt files to fang or snp
 fang <- fang_et_al_genotypes
+
 snp <- snp_position
 
 dim(fang) 
+
 dim(snp) 
 #### dim 2783, 986. this lists colms and rows
 #### dim 983, 15. this lists colms and rows
 
-ncol(fang) 
+ncol(fang)
+
 ncol(snp) 
 #### number of columns is 986
 #### number of columns is 15
 
-nrow(fang) 
+nrow(fang)
+
 nrow(snp) 
 #### 2783 rows
 #### 983 rows
@@ -24,11 +28,13 @@ nrow(snp)
 names(snp) 
 #### tells the names of column labels
 
-head(fang, 10) 
+head(fang, 10)
+
 head(snp, 10)
 #### shows first 10 rows of data for fang and snp files
 
-tail(fang, 10) 
+tail(fang, 10)
+
 tail(snp, 10)
 #### shows last 10 rows of data for fang and snp files
 
@@ -69,6 +75,7 @@ maize_transpose <- t(genotypes_maize)
 teosinte_transpose <- t(genotypes_teosinte)
 
 print(maize_transpose)
+
 print(teosinte_transpose)
 
 ### remove the unwanted columns from the snp data as indicated by the snp[-c(2,5:15)]. This means to remove column 2 AND 5 through 15.
