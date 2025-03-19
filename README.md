@@ -49,7 +49,7 @@ for(i in 1:ncol(snp)) {
 for(i in 1:ncol(fang)) {
   print(names(fang)[i])
   print(table(fang[, i], useNA = "ifany"))
-  cat("\n") # Adds a line before the next iteration
+  cat("\n")
 } 
 
 summary(snp) 
