@@ -72,6 +72,7 @@ print(genotypes_teosinte)
 
 ### Transpose the data for maize and teosinte
 maize_transpose <- t(genotypes_maize)
+
 teosinte_transpose <- t(genotypes_teosinte)
 
 print(maize_transpose)
