@@ -44,13 +44,16 @@ for(i in 1:ncol(snp)) {
   print(table(snp[, i], useNA = "ifany"))
   cat("\n")} # Adds a line before the next iteration
 
-### same thing but for fang file
+### same thing but for fang file, displays the content of each variable in the fang file
 for(i in 1:ncol(fang)) {
   print(names(fang)[i])
   print(table(fang[, i], useNA = "ifany"))
   cat("\n")} 
 
+### basic summary of snp file
+
 summary(snp) 
+
 #### this shows the length, class, mode, min's/maxes, quantiles of the file
 
 ## Data Processing
