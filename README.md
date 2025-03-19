@@ -161,7 +161,7 @@ ggplot(combined_data, aes(x = as.factor(combined_data$Chromosome), fill = Type))
        fill = "Species") +
   theme_minimal() +
   scale_fill_manual(values = c("Maize" = "blue", "Teosinte" = "red"))
-# From what I can tell based on the graph it seems as though teosinte and maize have the same number of SNPs in each chromosome
+#### From what I can tell based on the graph it seems as though teosinte and maize have the same number of SNPs in each chromosome
 
 
 
