@@ -42,15 +42,13 @@ tail(snp, 10)
 for(i in 1:ncol(snp)) {
   print(names(snp)[i])
   print(table(snp[, i], useNA = "ifany"))
-  cat("\n") # Adds a line before the next iteration
-} 
+  cat("\n")} # Adds a line before the next iteration
 
 ### same thing but for fang file
 for(i in 1:ncol(fang)) {
   print(names(fang)[i])
   print(table(fang[, i], useNA = "ifany"))
-  cat("\n")
-} 
+  cat("\n")} 
 
 summary(snp) 
 #### this shows the length, class, mode, min's/maxes, quantiles of the file
@@ -63,10 +61,12 @@ genotype_data <- read.table(file = "fang_et_al_genotypes.txt", header = TRUE)
 ### For Maize: filter these specified groups, ZMMIL, ZMMLR, ZMMR and assign to genotypes_maize. Essentially, this is extracting the rows when the group is one of the three indicated groups
 genotypes_maize <- filter(genotype_data, Group == "ZMMIL" | Group == "ZMMLR" | Group == "ZMMR")
 
+
 print(genotypes_maize)
 
 ### Same thing but for teosinte data, extracting the specified groups ZMPBA, ZMPIL, and ZMPJA
 genotypes_teosinte <- filter(genotype_data, Group == "ZMPBA" | Group == "ZMPIL" | Group == "ZMPJA")
+
 
 print(genotypes_teosinte)
 
@@ -80,11 +80,13 @@ print(teosinte_transpose)
 
 ### remove the unwanted columns from the snp data as indicated by the snp[-c(2,5:15)]. This means to remove column 2 AND 5 through 15.
 SNP_clean <- snp[-c(2,5:15)]
+
 SNP_clean 
 #### we can see we have the columns we want: SNP_ID, Chromosome, and Position
 
 ### label rownames as SNP_ID so we can then merge SNP_clean and the teosinte and maize files by row.names
 rownames(SNP_clean) <- SNP_clean$SNP_ID
+
 rownames(SNP_clean)
 
 ### merge maize and snp_clean
