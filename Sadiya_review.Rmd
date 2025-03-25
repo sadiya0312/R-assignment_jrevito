@@ -1,0 +1,54 @@
+---
+title: "Sadiya_review"
+author: "Sadiya Ahmad"
+date: "2025-03-25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Readme file
+
+Readme file on github can use some more description
+
+## R Markdown
+
+I don't think following step is correct:
+
+```{r}
+fang <- fang_et_al_genotypes
+snp <- snp_position
+```
+You are suppose to read these files rather than storing it as an object in fang and snp.
+You can use something like this:
+
+```{r}
+fang<- read.delim("fang_et_al_genotypes.txt", sep = "\t", header = TRUE)
+snp <- read.delim("snp_position.txt", sep = "\t", header = TRUE)
+```
+
+You are using file path for example here:
+
+```{r}
+write.table(subset(joined_teosinte, joined_teosinte[[3]] == "?"), 
+            file = file.path("/Users/jordyn/Desktop/BCB546_Spring2025/assignments/R-Assignment", "unknown_positions_teosinte.txt"), 
+            row.names = FALSE, col.names = TRUE, quote = FALSE, sep = "\t")
+```
+
+Instead of using the path to your computer, you can simply set the directory to the folder you want to save the file to and for file.path use only your file name like this:
+
+```{r}
+write.table(subset(joined_teosinte, joined_teosinte[[3]] == "?"), 
+            file = file.path("unknown_positions_teosinte.txt"), 
+            row.names = FALSE, col.names = TRUE, quote = FALSE, sep = "\t")
+```
+This makes easier to run the program on any computer.
+
+## Plots
+
+There is one plot but two other plots are missing
+
+## Final review
+
+Overall nicely done with proper comments. Can be made plateform independent with slight changes as mentioned above. Otherwise good work.
